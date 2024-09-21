@@ -7,7 +7,7 @@ name = "pypi"
 sqlalchemy = "<2.0,>=1.4"
 
 [dev-packages]
-alembic = "*"
+alembic = "<1.11,>=1.7"
 
 [requires]
 python_version = "3.8"

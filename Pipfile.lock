@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "15e00a13a45c3844e0f4dbc336484b16f864dbc9b1c0d977ce03e4b88445f304"
+            "sha256": "68fa0a65a1189c8e3c4d3e74d5f6d408ed3374938aacb0e2fcb6089f88cf422d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -151,12 +151,12 @@
     "develop": {
         "alembic": {
             "hashes": [
-                "sha256:1ff0ae32975f4fd96028c39ed9bb3c867fe3af956bd7bb37343b54c9fe7445ef",
-                "sha256:6b8733129a6224a9a711e17c99b08462dbf7cc9670ba8f2e2ae9af860ceb1953"
+                "sha256:295b54bbb92c4008ab6a7dcd1e227e668416d6f84b98b3c4446a2bc6214a556b",
+                "sha256:43942c3d4bf2620c466b91c0f4fca136fe51ae972394a0cc8b90810d664e4f5c"
             ],
             "index": "pypi",
-            "markers": "python_version >= '3.8'",
-            "version": "==1.13.2"
+            "markers": "python_version >= '3.7'",
+            "version": "==1.10.4"
         },
         "greenlet": {
             "hashes": [
