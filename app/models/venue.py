@@ -23,7 +23,6 @@ class Venue(Base):
             None)
 
     def most_frequent_band(self):
-        """Returns the band with the most concerts at this venue."""
         band_counts = {}
         for concert in self.concerts:
             band = concert.band
