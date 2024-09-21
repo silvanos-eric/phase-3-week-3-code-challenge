@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, Date, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import relationship
-from .base import Base
+from .base import Base, session
 
 
 class Concert(Base):
@@ -22,3 +22,9 @@ class Concert(Base):
 
     def __repr__(self):
         return f"Concert(id={self.id}, date={self.date}, band_id={self.band_id}, venue_id={self.venue_id})"
+
+    def is_hometown_show(self):
+        return self.venue.city == self.band.hometown
+
+    def introduction(self):
+        return f"Hello {self.venue.city}!!!!! We are {self.band.name} and we're from {self.band.hometown}"
