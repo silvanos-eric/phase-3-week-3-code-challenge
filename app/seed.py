@@ -55,7 +55,7 @@ def seed_data():
 
     # Create 90 concerts by randomly matching bands and venues with a random date
     concerts = []
-    for _ in range(500):
+    for _ in range(150):
         random_band = random.choice(bands)
         random_venue = random.choice(venues)
         random_date = fake.date_this_year()
