@@ -19,3 +19,6 @@ class Concert(Base):
 
     band = relationship('Band', back_populates='concerts')
     venue = relationship('Venue', back_populates='concerts')
+
+    def __repr__(self):
+        return f"Concert(id={self.id}, date={self.date}, band_id={self.band_id}, venue_id={self.venue_id})"

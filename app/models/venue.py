@@ -11,3 +11,6 @@ class Venue(Base):
     city = Column(String)
 
     concerts = relationship('Concert', back_populates='venue')
+
+    def __repr__(self):
+        return f"Venue(id={self.id}, title={self.title}, city={self.city})"
