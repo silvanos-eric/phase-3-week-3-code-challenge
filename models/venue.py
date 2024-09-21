@@ -10,4 +10,4 @@ class Venue(Base):
     title = Column(String, nullable=False)
     city = Column(String)
 
-    concerts = relationship('Concert', back_populates='band')
+    concerts = relationship('Concert', back_populates='venue')

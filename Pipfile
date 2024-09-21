@@ -8,6 +8,7 @@ sqlalchemy = "<2.0,>=1.4"
 
 [dev-packages]
 alembic = "<1.11,>=1.7"
+faker = "*"
 
 [requires]
 python_version = "3.8"
