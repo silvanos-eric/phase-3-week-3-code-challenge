@@ -15,9 +15,21 @@ class Band(Base):
     concerts = relationship('Concert', back_populates='band')
 
     def __repr__(self):
+        """Return a string representation of the Band object."""
+
         return f"Band(id={self.id}, name={self.name}, hometown={self.hometown})"
 
     def play_in_venue(self, venue, date):
+        """
+        Create a new Concert object, add it to the database, and commit the session.
+
+        Parameters
+        ----------
+        venue : Venue
+            The venue for the concert
+        date : str
+            The date of the concert, in the format 'YYYY-MM-DD'
+        """
         new_concert = Concert(band_id=self.id,
                               venue_id=venue.id,
                               date=datetime.strptime(date, "%Y-%m-%d").date())
@@ -25,6 +37,8 @@ class Band(Base):
         session.commit()
 
     def all_introductions(self):
+        """Return a list of all the concert introductions for this band."""
+
         return [concert.introduction() for concert in self.concerts]
 
     @classmethod
