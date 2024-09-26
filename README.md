@@ -56,24 +56,30 @@ This project is a simple concert tracking app built using Python, SQLAlchemy, an
 
 ```bash
 .
-├── alembic.ini             # Alembic configuration for database migrations
-├── app
-│   ├── __init__.py         # Models package initializer
-│   ├── base.py             # Base SQLAlchemy class and session creation
-│   ├── band.py             # Band model and related methods
-│   ├── concert.py          # Concert model and related methods
-│   ├── venue.py            # Venue model and related methods
-├── migrations              # Alembic migration scripts
-│   ├── env.py              # Alembic environment setup
-│   ├── README              # Placeholder README for Alembic directory
-│   └── versions            # Generated migration scripts
-│       ├── initial migration.py  # Migration for initial schema setup
-│       ├── create_band_model.py  # Migration for Band model
-│       ├── create_venue_model.py # Migration for Venue model
-│       └── create_concert_model.py # Migration for Concert model
-├── scripts
-│   └── app.py              # Entry point script for interacting with the database
-└── README.md               # Project description and usage guide
+├── alembic.ini
+├── concerts.db
+├── debug.py
+├── LICENSE
+├── migrations
+│   ├── env.py
+│   ├── README
+│   ├── script.py.mako
+│   └── versions
+│       ├── 5a0aa7f8ad00_initial_migration.py
+│       ├── 6889b7c70cdd_create_concert_model.py
+│       ├── bcfe55f29da1_create_band_model.py
+│       └── dd388c9e49ce_create_venue_model.py
+├── models
+│   ├── band.py
+│   ├── base.py
+│   ├── concert.py
+│   ├── __init__.py
+│   └── venue.py
+├── Pipfile
+├── Pipfile.lock
+├── README.md
+└── seed.py
+
 ```
 
 ## Models
